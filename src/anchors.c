@@ -225,7 +225,7 @@ char* rolltonum(char* str) {
   return &str[i];
 }
 
-int getline(FILE* infile, hll* tt) {
+int _getline(FILE* infile, hll* tt) {
   char temp[1024];
   char* help;
   int z, h;
@@ -248,7 +248,7 @@ hll* parseCHAOS(FILE* infile, int* totnum) {
   *totnum = 0;
   while(!feof(infile)) {
     tt = (hll*) malloc(sizeof(hll));
-    while (!feof(infile) && !getline(infile, tt))
+    while (!feof(infile) && !_getline(infile, tt))
       ;
     if (feof(infile)) break;
     if (gapfreechunks) {
