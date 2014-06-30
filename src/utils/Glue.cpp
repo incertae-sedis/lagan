@@ -1,6 +1,7 @@
 #include "MultiSequence.h"
 #include "SafeVector.h"
 #include "Output.h"
+#include <string.h>
 #include <math.h>
 #include <assert.h>
 #include <fstream>
