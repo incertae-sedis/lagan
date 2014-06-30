@@ -2,7 +2,7 @@
 #include<score.h>
 #include<leftinfluence.h>
 #include<rightinfluence.h>
-#include<fstream.h>
+#include<fstream>
 
 extern vector<class Score*> scoreFunctions[1<<(UPSTRANDBITS+DOWNSTRANDBITS+RELPOSBITS)];
 
