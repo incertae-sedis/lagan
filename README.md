@@ -1,9 +1,6 @@
-lagan-fork
-==========
+LAGAN
+=====
 
-A fork of the Michael Brudno's LAGAN
+This is a fork of Michael Brudno's program LAGAN and multi-LAGAN.
 
-Purpose
-=======
-
-There were a few trivial bugs preventing it from compiling. I've fixed these (I think).
+Brudno, Michael, et al. "LAGAN and Multi-LAGAN: efficient tools for large-scale multiple alignment of genomic DNA." Genome research 13.4 (2003): 721-731.
