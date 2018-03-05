@@ -216,7 +216,7 @@ while (1) {
 
 # FIND MAXIMAL-SCORING CONSISTENT CHAIN
 
-    `$lagandir/anchors $$.anchtemp $gfc $anchparams | sort -n +1 > $$.anchs.sorted`;
+    `$lagandir/anchors $$.anchtemp $gfc $anchparams | sort -nk 2 > $$.anchs.sorted`;
     if ($?) { exit(1); }
 
 # IF WE'RE DONE, THEN QUIT!
@@ -357,7 +357,7 @@ while (1) {
     $i++;
 }
 
-$res = `sort -nr +1 $$.anchs.sorted`;
+$res = `sort -nrk 2 $$.anchs.sorted`;
 if ($?) { exit(1); }
 
 `rm $$.*`;
