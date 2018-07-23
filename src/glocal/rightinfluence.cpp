@@ -1,6 +1,6 @@
 #include <rightinfluence.h>
 
-Fragment origin, end;
+Fragment originFrag, endFrag;
 
 // Sets the first default owner of the whole region
 void initRI(RI *RightInfluence, long long int scoreIndex) {
@@ -13,22 +13,22 @@ void initRI(RI *RightInfluence, long long int scoreIndex) {
 	}
 
 	// will lose to anyone
-	origin.seq1End = 0; origin.seq2End = 0;
-    origin.seq1Start = 0; origin.seq2Start = 0;
+	originFrag.seq1End = 0; originFrag.seq2End = 0;
+    originFrag.seq1Start = 0; originFrag.seq2Start = 0;
 
 	// hack to aid winner selection
-	origin.score = -1;
-	end.score = -2;
-	origin.totalScore = end.totalScore = 0;
+	originFrag.score = -1;
+	endFrag.score = -2;
+	originFrag.totalScore = endFrag.totalScore = 0;
 
 	// will win against anyone
-	end.seq1End = 0; end.seq2End = 0;
-	end.seq1Start = 0; end.seq2Start = 0;
+	endFrag.seq1End = 0; endFrag.seq2End = 0;
+	endFrag.seq1Start = 0; endFrag.seq2Start = 0;
 
-	origin.back = NULL;
+	originFrag.back = NULL;
 
-    RightInfluence->act[-INF] = &origin;
-    RightInfluence->act[+INF] = &end;
+    RightInfluence->act[-INF] = &originFrag;
+    RightInfluence->act[+INF] = &endFrag;
 }
 
 
